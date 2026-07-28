@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Facebook, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
 import { useI18n } from "@/i18n";
 import { COMPANY, PRODUCT_CATEGORIES } from "@/data/site";
+import logo from "@/assets/albemar-logo.png.asset.json";
 
 export function Footer() {
   const { t } = useI18n();
@@ -11,10 +12,14 @@ export function Footer() {
       <div className="container-page grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-2.5">
-            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-md bg-brand font-display text-sm font-bold">
-              AM
-            </span>
-            <span className="font-display text-lg font-bold">{COMPANY.name}</span>
+            <img
+              src={logo.url}
+              alt={`${COMPANY.name} logo`}
+              width={480}
+              height={480}
+              loading="lazy"
+              className="h-14 w-auto object-contain brightness-0 invert"
+            />
           </div>
           <p className="mt-4 text-sm leading-relaxed opacity-80">{t("footer.about")}</p>
           <div className="mt-5 flex items-center gap-3">
