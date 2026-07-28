@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Menu, X, Globe, Phone } from "lucide-react";
 import { useI18n, LANGS } from "@/i18n";
 import { COMPANY } from "@/data/site";
+import logo from "@/assets/albemar-logo.png.asset.json";
 
 const NAV = [
   { to: "/", key: "nav.home" },
@@ -31,11 +32,14 @@ export function Header() {
       </div>
 
       <div className="container-page grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-3 lg:flex lg:justify-between">
-        <Link to="/" className="flex min-w-0 items-center gap-2.5">
-          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-md bg-brand text-primary-foreground font-display text-sm font-bold">
-            AM
-          </span>
-          <span className="truncate font-display text-lg font-bold text-brand-dark">{COMPANY.name}</span>
+        <Link to="/" className="flex min-w-0 items-center gap-2.5" aria-label={COMPANY.name}>
+          <img
+            src={logo.url}
+            alt={`${COMPANY.name} logo`}
+            width={480}
+            height={480}
+            className="h-11 w-auto shrink-0 object-contain md:h-12"
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
