@@ -12,7 +12,7 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-2.5">
             <span className="grid h-9 w-9 shrink-0 place-items-center rounded-md bg-brand font-display text-sm font-bold">
-              LT
+              AM
             </span>
             <span className="font-display text-lg font-bold">{COMPANY.name}</span>
           </div>

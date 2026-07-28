@@ -8,10 +8,10 @@ import gallerySetup from "@/assets/gallery-setup.jpg";
 import hero from "@/assets/hero-conference.jpg";
 
 export const COMPANY = {
-  name: "LinguaTech",
-  phone: "+670 7700 1234",
-  whatsapp: "67077001234",
-  email: "info@linguatech.example",
+  name: "ALBEMAR",
+  phone: "+670 75501233 | 73089897",
+  whatsapp: "67075501233",
+  email: "albemar.am.tl@gmail.com",
   address: "Rua Belarmino Lobo 12, Dili, Timor-Leste",
   mapsQuery: "Rua Belarmino Lobo, Dili, Timor-Leste",
   social: {
