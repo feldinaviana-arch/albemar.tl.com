@@ -33,7 +33,7 @@ export function Header() {
       <div className="container-page grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-3 lg:flex lg:justify-between">
         <Link to="/" className="flex min-w-0 items-center gap-2.5">
           <span className="grid h-9 w-9 shrink-0 place-items-center rounded-md bg-brand text-primary-foreground font-display text-sm font-bold">
-            LT
+            AM
           </span>
           <span className="truncate font-display text-lg font-bold text-brand-dark">{COMPANY.name}</span>
         </Link>

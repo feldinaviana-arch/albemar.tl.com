@@ -7,13 +7,13 @@ import { SectionHeading } from "@/components/Section";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "LinguaTech — Interpretation Equipment & Language Services" },
+      { title: "ALBEMAR — Interpretation Equipment & Language Services" },
       {
         name: "description",
         content:
           "Sale and rental of interpretation systems, conference headsets, audio systems and electronics, plus professional interpretation and translation services.",
       },
-      { property: "og:title", content: "LinguaTech — Interpretation Equipment & Language Services" },
+      { property: "og:title", content: "ALBEMAR — Interpretation Equipment & Language Services" },
       {
         property: "og:description",
         content: "Conference technology and professional interpretation and translation services.",
@@ -73,7 +73,7 @@ function Index() {
             {[
               { v: "500+", k: "hero.stat1" },
               { v: "20", k: "hero.stat2" },
-              { v: "12", k: "hero.stat3" },
+              { v: "10+", k: "hero.stat3" },
             ].map((s) => (
               <div key={s.k}>
                 <dt className="font-display text-2xl font-bold md:text-3xl">{s.v}</dt>
