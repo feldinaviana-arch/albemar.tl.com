@@ -11,6 +11,10 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { I18nProvider } from "@/i18n";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 function NotFoundComponent() {
   return (
@@ -77,21 +81,45 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "LinguaTech — Conference Equipment & Interpretation Services" },
+      {
+        name: "description",
+        content:
+          "Interpretation systems, conference headsets, audio equipment and professional interpretation and translation services.",
+      },
+      { property: "og:site_name", content: "LinguaTech" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap",
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "LinguaTech",
+          description:
+            "Supplier of interpretation equipment, conference headsets and audio systems, and provider of interpretation and translation services.",
+          telephone: "+670 7700 1234",
+          email: "info@linguatech.example",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Rua Belarmino Lobo 12",
+            addressLocality: "Dili",
+            addressCountry: "TL",
+          },
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -119,8 +147,18 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <I18nProvider>
+        <div className="flex min-h-screen flex-col bg-background">
+          <Header />
+          <main className="flex-1">
+            {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+            <Outlet />
+          </main>
+          <Footer />
+          <WhatsAppButton />
+        </div>
+      </I18nProvider>
     </QueryClientProvider>
   );
 }
+
