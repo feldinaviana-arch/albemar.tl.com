@@ -67,7 +67,7 @@ const en: Dict = {
 
   "products.title": "Products",
   "products.lead":
-    "Equipment for sale and rental — from interpretation systems to everyday electronics for your office or venue.",
+    "Equipment for sale and rental — interpretation systems, conference headsets and audio systems for your office or venue.",
   "products.features": "Includes",
   "products.enquire": "Enquire about this range",
 
@@ -212,7 +212,7 @@ const pt: Dict = {
 
   "products.title": "Produtos",
   "products.lead":
-    "Equipamento para venda e aluguer — de sistemas de interpretação a eletrónica para o seu escritório ou sala.",
+    "Equipamento para venda e aluguer — sistemas de interpretação, auscultadores de conferência e sistemas de áudio para o seu escritório ou sala.",
   "products.features": "Inclui",
   "products.enquire": "Pedir informações",
 
@@ -351,7 +351,7 @@ const tet: Dict = {
   "about.valuesD": "Konfiansa, presizaun, konfidensialidade no respeitu ba lian hotu-hotu.",
 
   "products.title": "Produtu",
-  "products.lead": "Ekipamentu ba fa'an no aluga — husi sistema interpretasaun to'o eletróniku ba ita-nia eskritóriu.",
+  "products.lead": "Ekipamentu ba fa'an no aluga — sistema interpretasaun, auskultadór konferénsia no sistema áudio ba ita-nia eskritóriu.",
   "products.features": "Inklui",
   "products.enquire": "Husu informasaun",
 

@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Sale and rental of interpretation systems, conference headsets, audio systems and electronics, plus professional interpretation and translation services.",
+          "Sale and rental of interpretation systems, conference headsets and audio systems, plus professional interpretation and translation services.",
       },
       { property: "og:title", content: "ALBEMAR — Interpretation Equipment & Language Services" },
       {
