@@ -67,7 +67,7 @@ const en: Dict = {
 
   "products.title": "Products",
   "products.lead":
-    "Equipment for sale and rental — from interpretation systems to everyday electronics for your office or venue.",
+    "Equipment for sale and rental — interpretation systems, conference headsets and audio systems for your office or venue.",
   "products.features": "Includes",
   "products.enquire": "Enquire about this range",
 
@@ -87,10 +87,6 @@ const en: Dict = {
   "cat.audioD":
     "Speakers, mixers, amplifiers, wireless microphones and full PA packages sized for boardrooms up to conference halls.",
   "cat.audioF": "Active PA speakers|Digital mixing consoles|Wireless mic systems|Amplifiers & DI boxes",
-  "cat.elec": "Electronic Devices",
-  "cat.elecD":
-    "Projectors, tablets, digital recorders, adapters and accessories that keep your meeting rooms running.",
-  "cat.elecF": "Projectors & screens|Tablets and laptops|Digital voice recorders|Cables and adapters",
 
   "services.title": "Services",
   "services.lead":
@@ -216,7 +212,7 @@ const pt: Dict = {
 
   "products.title": "Produtos",
   "products.lead":
-    "Equipamento para venda e aluguer — de sistemas de interpretação a eletrónica para o seu escritório ou sala.",
+    "Equipamento para venda e aluguer — sistemas de interpretação, auscultadores de conferência e sistemas de áudio para o seu escritório ou sala.",
   "products.features": "Inclui",
   "products.enquire": "Pedir informações",
 
@@ -236,9 +232,6 @@ const pt: Dict = {
   "cat.audioD":
     "Colunas, mesas de mistura, amplificadores, microfones sem fios e sistemas PA completos para salas de qualquer dimensão.",
   "cat.audioF": "Colunas amplificadas|Mesas de mistura digitais|Microfones sem fios|Amplificadores e DI",
-  "cat.elec": "Dispositivos Eletrónicos",
-  "cat.elecD": "Projetores, tablets, gravadores digitais, adaptadores e acessórios para as suas salas de reunião.",
-  "cat.elecF": "Projetores e telas|Tablets e portáteis|Gravadores digitais|Cabos e adaptadores",
 
   "services.title": "Serviços",
   "services.lead": "Serviços linguísticos e técnicos prestados por profissionais acreditados, no local ou à distância.",
@@ -358,7 +351,7 @@ const tet: Dict = {
   "about.valuesD": "Konfiansa, presizaun, konfidensialidade no respeitu ba lian hotu-hotu.",
 
   "products.title": "Produtu",
-  "products.lead": "Ekipamentu ba fa'an no aluga — husi sistema interpretasaun to'o eletróniku ba ita-nia eskritóriu.",
+  "products.lead": "Ekipamentu ba fa'an no aluga — sistema interpretasaun, auskultadór konferénsia no sistema áudio ba ita-nia eskritóriu.",
   "products.features": "Inklui",
   "products.enquire": "Husu informasaun",
 
@@ -378,9 +371,6 @@ const tet: Dict = {
   "cat.audioD":
     "Kolunas, mesa mistura, amplifikadór, mikrofone sem fiu no sistema PA kompletu ba sala oioin.",
   "cat.audioF": "Koluna PA ativu|Mesa mistura dijitál|Mikrofone sem fiu|Amplifikadór no DI",
-  "cat.elec": "Dispozitivu Eletróniku",
-  "cat.elecD": "Projetór, tablet, gravadór dijitál, adaptadór no asesóriu ba sala reuniaun.",
-  "cat.elecF": "Projetór no ekran|Tablet no laptop|Gravadór dijitál|Kabu no adaptadór",
 
   "services.title": "Servisu",
   "services.lead": "Servisu lian no tékniku husi profisionál akreditadu, iha fatin ka online.",

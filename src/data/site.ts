@@ -2,7 +2,6 @@ import catBook from "@/assets/cat-book.jpg";
 import catInterp from "@/assets/cat-interpretation.jpg";
 import catHeadsets from "@/assets/cat-headsets.jpg";
 import catAudio from "@/assets/cat-audio.jpg";
-import catElectronics from "@/assets/cat-electronics.jpg";
 import galleryBooth from "@/assets/gallery-booth.jpg";
 import gallerySetup from "@/assets/gallery-setup.jpg";
 import hero from "@/assets/hero-conference.jpg";
@@ -26,7 +25,6 @@ export const PRODUCT_CATEGORIES = [
   { slug: "interpretation-equipment", image: catInterp, titleKey: "cat.interp", descKey: "cat.interpD", featuresKey: "cat.interpF" },
   { slug: "conference-headsets", image: catHeadsets, titleKey: "cat.headsets", descKey: "cat.headsetsD", featuresKey: "cat.headsetsF" },
   { slug: "audio-systems", image: catAudio, titleKey: "cat.audio", descKey: "cat.audioD", featuresKey: "cat.audioF" },
-  { slug: "electronic-devices", image: catElectronics, titleKey: "cat.elec", descKey: "cat.elecD", featuresKey: "cat.elecF" },
 ];
 
 export const SERVICES = [

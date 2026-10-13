@@ -11,7 +11,7 @@ export const Route = createFileRoute("/products")({
       {
         name: "description",
         content:
-          "Book equipment, interpretation systems, conference headsets, audio systems and electronic devices for sale and rental.",
+          "Book equipment, interpretation systems, conference headsets and audio systems for sale and rental.",
       },
       { property: "og:title", content: "Products — LinguaTech" },
       { property: "og:description", content: "Conference and interpretation equipment for sale and rental." },
