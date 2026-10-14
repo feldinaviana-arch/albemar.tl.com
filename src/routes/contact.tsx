@@ -32,10 +32,17 @@ function ContactPage() {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
+    // Perbaikan ekstraksi data form yang aman untuk TypeScript & Netlify
+    const searchParams = new URLSearchParams();
+    formData.forEach((value, key) => {
+      searchParams.append(key, value.toString());
+    });
+
+    // Mengirimkan data formulir ke serverless Netlify Forms
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData as any).toString(),
+      body: searchParams.toString(),
     })
       .then(() => {
         setSent(true);
@@ -52,6 +59,7 @@ function ContactPage() {
       <section className="section-y">
         <div className="container-page grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
           <form name="contact" data-netlify="true" onSubmit={onSubmit} className="min-w-0 rounded-lg border border-border bg-card p-6 md:p-8">
+            {/* Input tersembunyi wajib agar Netlify Forms mengenali form ini */}
             <input type="hidden" name="form-name" value="contact" />
 
             <div className="grid gap-5 sm:grid-cols-2">
