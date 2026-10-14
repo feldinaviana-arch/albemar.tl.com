@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Menu, X, Globe, Phone } from "lucide-react";
 import { useI18n, LANGS } from "@/i18n";
 import { COMPANY } from "@/data/site";
-import logo from "@/assets/albemar-logo.png.asset.json";
 
 const NAV = [
   { to: "/", key: "nav.home" },
@@ -34,7 +33,7 @@ export function Header() {
       <div className="container-page grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-3 lg:flex lg:justify-between">
         <Link to="/" className="flex min-w-0 items-center gap-2.5" aria-label={COMPANY.name}>
           <img
-            src={logo.url}
+            src="/albemar-logo.jpeg"
             alt={`${COMPANY.name} logo`}
             width={480}
             height={480}
