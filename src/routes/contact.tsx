@@ -40,7 +40,8 @@ function ContactPage() {
       <PageHero title={t("contact.title")} lead={t("contact.lead")} />
       <section className="section-y">
         <div className="container-page grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
-          <form onSubmit={onSubmit} className="min-w-0 rounded-lg border border-border bg-card p-6 md:p-8">
+          <form name="contact" data-netlify="true" onSubmit={onSubmit} className="min-w-0 rounded-lg border border-border bg-card p-6 md:p-8">
+
             <div className="grid gap-5 sm:grid-cols-2">
               <label className="block text-sm font-medium text-foreground">
                 {t("contact.name")}
