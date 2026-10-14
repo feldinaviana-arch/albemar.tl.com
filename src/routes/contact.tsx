@@ -29,8 +29,19 @@ function ContactPage() {
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSent(true);
-    e.currentTarget.reset();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData as any).toString(),
+    })
+      .then(() => {
+        setSent(true);
+        form.reset();
+      })
+      .catch((error) => alert(error));
   };
 
   const field = "mt-1.5 w-full rounded-md border border-input bg-background px-3 py-2.5 text-sm outline-none transition focus:border-brand focus:ring-2 focus:ring-ring/30";
@@ -41,6 +52,7 @@ function ContactPage() {
       <section className="section-y">
         <div className="container-page grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
           <form name="contact" data-netlify="true" onSubmit={onSubmit} className="min-w-0 rounded-lg border border-border bg-card p-6 md:p-8">
+            <input type="hidden" name="form-name" value="contact" />
 
             <div className="grid gap-5 sm:grid-cols-2">
               <label className="block text-sm font-medium text-foreground">
