@@ -91,13 +91,19 @@ function ContactPage() {
             </label>
             <button
               type="submit"
-              className="mt-6 w-full rounded-md bg-brand px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand-dark sm:w-auto"
+              disabled={sending}
+              className="mt-6 w-full rounded-md bg-brand px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand-dark disabled:opacity-60 sm:w-auto"
             >
-              {t("contact.send")}
+              {sending ? t("contact.sending") : t("contact.send")}
             </button>
             {sent && (
               <p role="status" className="mt-4 rounded-md bg-accent px-4 py-3 text-sm text-brand-dark font-medium">
                 {t("contact.sent")}
+              </p>
+            )}
+            {error && (
+              <p role="alert" className="mt-4 rounded-md bg-destructive/10 px-4 py-3 text-sm text-destructive font-medium">
+                {error}
               </p>
             )}
           </form>
