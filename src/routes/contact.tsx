@@ -40,15 +40,29 @@ function ContactPage() {
     setSending(true);
     setError(null);
     try {
-      await submit({
-        data: {
-          name: formData.get("name")?.toString() || "",
-          email: formData.get("email")?.toString() || "",
-          phone: formData.get("phone")?.toString() || "",
-          subject: formData.get("subject")?.toString() || "",
-          message: formData.get("message")?.toString() || "",
-        },
+      const payload = {
+        name: formData.get("name")?.toString() || "",
+        email: formData.get("email")?.toString() || "",
+        phone: formData.get("phone")?.toString() || "",
+        subject: formData.get("subject")?.toString() || "",
+        message: formData.get("message")?.toString() || "",
+      };
+      // Web3Forms access key is public by design (tied to albemar.am.tl@gmail.com)
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: "249440d9-8081-4e9c-ba2c-06efec72419b",
+          from_name: "ALBEMAR Website",
+          ...payload,
+          subject: `ALBEMAR Website: ${payload.subject}`,
+          replyto: payload.email,
+        }),
       });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || !json.success) throw new Error("web3forms failed");
+      // Backup copy in the database; don't fail the user if this part errors
+      submit({ data: payload }).catch(() => {});
       setSent(true);
       form.reset();
     } catch {
