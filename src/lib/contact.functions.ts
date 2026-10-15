@@ -39,7 +39,10 @@ export const submitContactForm = createServerFn({ method: "POST" })
       .select("id")
       .single();
 
-    if (error) throw new Error("Could not save your message. Please try again.");
+    if (error) {
+      console.error("contact_submissions insert failed:", JSON.stringify(error));
+      throw new Error("Could not save your message. Please try again.");
+    }
 
     // Owner notification email is wired once the sender domain is verified.
     return { ok: true as const, id: row.id };
