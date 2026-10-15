@@ -37,7 +37,7 @@ export function Header() {
             alt={`${COMPANY.name} logo`}
             width={480}
             height={480}
-            className="h-11 w-auto shrink-0 object-contain md:h-12"
+            className="h-11 w-11 rounded-full object-cover shrink-0 md:h-12 md:w-12"
           />
         </Link>
 
