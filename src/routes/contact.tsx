@@ -32,18 +32,21 @@ function ContactPage() {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    const googleFormUrl = "https://google.com";
+    // URL Response resmi untuk formulir "REQUESTING FORMS" Anda
+    const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLScX9gCDsWuUT4O8SLEvXva2w/formResponse";
 
     const searchParams = new URLSearchParams();
-    searchParams.append("entry.2005620554", formData.get("name")?.toString() || "");
-    searchParams.append("entry.1045781291", formData.get("email")?.toString() || "");
-    searchParams.append("entry.1381383574", formData.get("subject")?.toString() || "");
-    searchParams.append("entry.839337160", formData.get("message")?.toString() || "");
+    
+    // Pemetaan ID entry pertanyaan dari hasil inspect element pratinjau Anda
+    searchParams.append("entry.51990049", formData.get("name")?.toString() || "");
+    searchParams.append("entry.747760861", formData.get("email")?.toString() || "");
+    searchParams.append("entry.1307088272", formData.get("subject")?.toString() || "");
+    searchParams.append("entry.285169875", formData.get("message")?.toString() || "");
 
     try {
       await fetch(googleFormUrl, {
         method: "POST",
-        mode: "no-cors",
+        mode: "no-cors", // Tetap no-cors untuk memintas pembatasan CORS eksternal Google
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: searchParams.toString(),
       });
@@ -131,7 +134,7 @@ function ContactPage() {
             </ul>
 
             <a
-             href={`https://wa.me/${COMPANY.whatsapp}`}
+              href={`https://wa.me{COMPANY.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 rounded-md bg-[#25D366] px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
