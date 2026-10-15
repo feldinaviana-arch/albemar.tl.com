@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useServerFn } from "@tanstack/react-start";
 import { useState, type FormEvent } from "react";
 import { MapPin, Phone, Mail, Clock, MessageCircle, Facebook, Linkedin, Instagram } from "lucide-react";
 import { useI18n } from "@/i18n";
 import { COMPANY } from "@/data/site";
 import { PageHero } from "@/components/Section";
+import { submitContactForm } from "@/lib/contact.functions";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
