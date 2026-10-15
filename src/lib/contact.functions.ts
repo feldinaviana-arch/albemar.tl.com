@@ -27,17 +27,15 @@ export const submitContactForm = createServerFn({ method: "POST" })
       },
     });
 
-    const { data: row, error } = await supabase
-      .from("contact_submissions")
-      .insert({
-        name: data.name,
-        email: data.email,
-        phone: data.phone || null,
-        subject: data.subject,
-        message: data.message,
-      })
-      .select("id")
-      .single();
+    const id = crypto.randomUUID();
+    const { error } = await supabase.from("contact_submissions").insert({
+      id,
+      name: data.name,
+      email: data.email,
+      phone: data.phone || null,
+      subject: data.subject,
+      message: data.message,
+    });
 
     if (error) {
       console.error("contact_submissions insert failed:", JSON.stringify(error));
@@ -45,5 +43,5 @@ export const submitContactForm = createServerFn({ method: "POST" })
     }
 
     // Owner notification email is wired once the sender domain is verified.
-    return { ok: true as const, id: row.id };
+    return { ok: true as const, id };
   });
