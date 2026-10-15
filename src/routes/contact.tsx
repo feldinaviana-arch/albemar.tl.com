@@ -28,36 +28,33 @@ export const Route = createFileRoute("/contact")({
 function ContactPage() {
   const { t } = useI18n();
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const submit = useServerFn(submitContactForm);
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    // URL Response resmi untuk formulir "REQUESTING FORMS" Anda
-    const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLScX9gCDsWuUT4O8SLEvXva2w/formResponse";
-
-    const searchParams = new URLSearchParams();
-    
-    // Pemetaan ID entry pertanyaan dari hasil inspect element pratinjau Anda
-    searchParams.append("entry.51990049", formData.get("name")?.toString() || "");
-    searchParams.append("entry.747760861", formData.get("email")?.toString() || "");
-    searchParams.append("entry.1307088272", formData.get("subject")?.toString() || "");
-    searchParams.append("entry.285169875", formData.get("message")?.toString() || "");
-
+    setSending(true);
+    setError(null);
     try {
-      await fetch(googleFormUrl, {
-        method: "POST",
-        mode: "no-cors", // Tetap no-cors untuk memintas pembatasan CORS eksternal Google
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: searchParams.toString(),
+      await submit({
+        data: {
+          name: formData.get("name")?.toString() || "",
+          email: formData.get("email")?.toString() || "",
+          phone: formData.get("phone")?.toString() || "",
+          subject: formData.get("subject")?.toString() || "",
+          message: formData.get("message")?.toString() || "",
+        },
       });
-
       setSent(true);
       form.reset();
-    } catch (error) {
-      console.error("Google Form submission error:", error);
-      alert("Terjadi kesalahan saat mengirim pesan. Silakan coba lagi nanti.");
+    } catch {
+      setError(t("contact.error"));
+    } finally {
+      setSending(false);
     }
   };
 
