@@ -14,10 +14,10 @@ export function Footer() {
             <img
               src="/albemar-logo.jpeg"
               alt={`${COMPANY.name} logo`}
-              width={480}
-              height={480}
+              width={200}
+              height={200}
               loading="lazy"
-              className="h-14 w-auto object-contain"
+              className="h-16 w-16 rounded-full object-cover"
             />
           </div>
           <p className="mt-4 text-sm leading-relaxed opacity-80">{t("footer.about")}</p>
