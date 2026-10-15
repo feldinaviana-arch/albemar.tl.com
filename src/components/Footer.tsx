@@ -2,7 +2,6 @@ import { Link } from "@tanstack/react-router";
 import { Facebook, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
 import { useI18n } from "@/i18n";
 import { COMPANY, PRODUCT_CATEGORIES } from "@/data/site";
-import logo from "@/assets/albemar-logo.png.asset.json";
 
 export function Footer() {
   const { t } = useI18n();
@@ -13,12 +12,12 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-2.5">
             <img
-              src={logo.url}
+              src="/albemar-logo.jpeg"
               alt={`${COMPANY.name} logo`}
               width={480}
               height={480}
               loading="lazy"
-              className="h-14 w-auto object-contain brightness-0 invert"
+              className="h-14 w-auto object-contain"
             />
           </div>
           <p className="mt-4 text-sm leading-relaxed opacity-80">{t("footer.about")}</p>
