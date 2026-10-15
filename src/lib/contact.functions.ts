@@ -12,7 +12,7 @@ const contactSchema = z.object({
 });
 
 export const submitContactForm = createServerFn({ method: "POST" })
-  .inputValidator((data: unknown) => contactSchema.parse(data))
+  .validator((data: unknown) => contactSchema.parse(data))
   .handler(async ({ data }) => {
     const key = process.env["SUPABASE_PUBLISHABLE_KEY"]!;
     const supabase = createClient<Database>(process.env["SUPABASE_URL"]!, key, {
