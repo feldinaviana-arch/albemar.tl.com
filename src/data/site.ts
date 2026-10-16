@@ -11,8 +11,8 @@ export const COMPANY = {
   phone: "+670 75501233 | 73089897",
   whatsapp: "67075501233",
   email: "albemar.am.tl@gmail.com",
-  address: "Rua Belarmino Lobo 12, Dili, Timor-Leste",
-  mapsQuery: "Rua Belarmino Lobo, Dili, Timor-Leste",
+  address: "Avn. Pres. Nicolau Lobato, Dili, Timor-Leste",
+  mapsQuery: "Avn. Pres. Nicolau Lobato, Dili, Timor-Leste",
   social: {
     facebook: "https://facebook.com",
     linkedin: "https://linkedin.com",
