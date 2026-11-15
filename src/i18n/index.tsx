@@ -34,7 +34,7 @@ const en: Dict = {
   "hero.stat3": "Years of service",
 
   "home.catsTitle": "Product categories",
-  "home.catsSub": "Certified equipment, ready for rental.",
+  "home.catsSub": "Certified equipment, ready for sale or rental.",
   "home.servicesTitle": "Professional language services",
   "home.servicesSub": "Certified interpreters and translators for conferences, courts and business.",
   "home.whyTitle": "Why work with us",
@@ -67,7 +67,7 @@ const en: Dict = {
 
   "products.title": "Products",
   "products.lead":
-    "Equipment for rental — interpretation systems, conference headsets and audio systems for your office or venue.",
+    "Equipment for sale and rental — interpretation systems, conference headsets and audio systems for your office or venue.",
   "products.features": "Includes",
   "products.enquire": "Enquire about this range",
 
@@ -174,14 +174,14 @@ const pt: Dict = {
   "hero.title": "Cada voz ouvida. Em todas as línguas.",
   "hero.subtitle":
     "Fornecemos e alugamos sistemas profissionais de interpretação, auscultadores de conferência e equipamento áudio — e prestamos serviços de interpretação e tradução para eventos de qualquer dimensão.",
-  "hero.cta": "Solicitar cotação",
+  "hero.cta": "Pedir Orçamento",
   "hero.cta2": "Ver Produtos",
   "hero.stat1": "Eventos equipados",
   "hero.stat2": "Línguas de trabalho",
   "hero.stat3": "Anos de experiência",
 
   "home.catsTitle": "Categorias de produtos",
-  "home.catsSub": "Equipamento certificado, para aluguer.",
+  "home.catsSub": "Equipamento certificado, para venda ou aluguer.",
   "home.servicesTitle": "Serviços linguísticos profissionais",
   "home.servicesSub": "Intérpretes e tradutores certificados para conferências, tribunais e empresas.",
   "home.whyTitle": "Porquê trabalhar connosco",
@@ -214,7 +214,7 @@ const pt: Dict = {
 
   "products.title": "Produtos",
   "products.lead":
-    "Equipamento para aluguer — sistemas de interpretação, auscultadores de conferência e sistemas de áudio para o seu escritório ou sala.",
+    "Equipamento para venda e aluguer — sistemas de interpretação, auscultadores de conferência e sistemas de áudio para o seu escritório ou sala.",
   "products.features": "Inclui",
   "products.enquire": "Pedir informações",
 
@@ -313,13 +313,13 @@ const tet: Dict = {
   "nav.gallery": "Galeria",
   "nav.clients": "Kliente",
   "nav.contact": "Kontaktu",
-  "nav.quote": "Husu Kotasaun",
+  "nav.quote": "Husu Orsamentu",
 
   "hero.eyebrow": "Ekipamentu konferénsia no solusaun lian",
   "hero.title": "Lian hotu-hotu rona. Iha lian hotu-hotu.",
   "hero.subtitle":
     "Ami fa'an no aluga sistema interpretasaun profisionál, auskultadór konferénsia no ekipamentu áudio — no fó servisu interpretasaun no tradusaun ba eventu boot ka ki'ik.",
-  "hero.cta": "Husu Kotasaun",
+  "hero.cta": "Husu Orsamentu",
   "hero.cta2": "Haree Produtu",
   "hero.stat1": "Eventu ne'ebé ekipa ona",
   "hero.stat2": "Lian servisu",
@@ -355,14 +355,14 @@ const tet: Dict = {
   "about.valuesD": "Konfiansa, presizaun, konfidensialidade no respeitu ba lian hotu-hotu.",
 
   "products.title": "Produtu",
-  "products.lead": "Ekipamentu ba aluga — sistema interpretasaun, auskultadór konferénsia no sistema áudio ba ita-nia eskritóriu.",
+  "products.lead": "Ekipamentu ba fa'an no aluga — sistema interpretasaun, auskultadór konferénsia no sistema áudio ba ita-nia eskritóriu.",
   "products.features": "Inklui",
   "products.enquire": "Husu informasaun",
 
-  "cat.book": "Traduz Dokumentus",
+  "cat.book": "Ekipamentu Livru",
   "cat.bookD":
-    "Servisu tradusaun dokumentus ba instituisaun sira iha area .",
-  "cat.bookF": "Agrikultura|Edukasaun|Saúde|Comérsiu|",
+    "Skaner livru, masina enkuadernasaun no laminasaun, prateleira biblioteka no ekipamentu arkivu ba instituisaun.",
+  "cat.bookF": "Skaner livru|Masina enkuadernasaun|Laminadór no guilhotina|Prateleira biblioteka",
   "cat.interp": "Ekipamentu Interpretasaun",
   "cat.interpD":
     "Sistema interpretasaun simultánea kompletu: transmisór infravermellu no dijitál, resetór, konsola intérprete no kabine.",
@@ -373,8 +373,8 @@ const tet: Dict = {
   "cat.headsetsF": "Auskultadór delegadu|Auskultadór intérprete|Auskultadór monitorizasaun|Auriku deskartavel",
   "cat.audio": "Sistema Áudio",
   "cat.audioD":
-    "Kolunas, Tape audio recorder, amplifikadór, mikrofone sem fiu no sistema PA kompletu ba sala oioin.",
-  "cat.audioF": "Koluna PA ativu|Tape audio recorder|Mikrofone sem fiu|Amplifikadór no DI",
+    "Kolunas, mesa mistura, amplifikadór, mikrofone sem fiu no sistema PA kompletu ba sala oioin.",
+  "cat.audioF": "Koluna PA ativu|Mesa mistura dijitál|Mikrofone sem fiu|Amplifikadór no DI",
 
   "services.title": "Servisu",
   "services.lead": "Servisu lian no tékniku husi profisionál akreditadu, iha fatin ka online.",
@@ -408,7 +408,7 @@ const tet: Dict = {
   "clients.t1a": "Diretór Eventu, Kimeira Nasionál",
   "clients.t2": "Entrega lalais, ekipamentu moos no intérprete ne'ebé komprende ami-nia vokabuláriu tékniku.",
   "clients.t2a": "Jestór Operasaun, Setór Enerjia",
-  "clients.t3": "Parseiru prinsipál ba ami-nia programa formasaun multilingua hotu.",
+  "clients.t3": "Parseiru prinsipál ba ami-nia programa formasaun multilingue hotu.",
   "clients.t3a": "Koordenadór Programa, ONG",
 
   "contact.title": "Kontaktu",
@@ -429,7 +429,7 @@ const tet: Dict = {
   "contact.findUs": "Ami-nia fatin",
 
   "footer.about":
-    "Teknolojia konferénsia, ekipamentu interpretasaun no servisu lian profisionál ba organizasaun multilingua.",
+    "Teknolojia konferénsia, ekipamentu interpretasaun no servisu lian profisionál ba organizasaun multilingue.",
   "footer.quick": "Ligasaun lalais",
   "footer.prods": "Produtu",
   "footer.contact": "Kontaktu",
